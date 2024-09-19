@@ -6,6 +6,7 @@ const http=require('http');
 const socket=require('socket.io');
 const {Chess}=require('chess.js');
 const path =require("path")
+const port = process.env.PORT || 6000;
 
 
 const app=express();
@@ -75,6 +76,6 @@ console.log("connected",uniquesocket.id);
 })
 
 
-server.listen(3000,()=>{
-    console.log("server started");
-})
+server.listen(port, () => {
+    console.log(`Example app listening on port ${port}`)
+  })
